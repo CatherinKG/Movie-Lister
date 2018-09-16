@@ -8,13 +8,11 @@
 
 import UIKit
 
+
 class MovieListViewController: UIViewController {
 
     @IBOutlet weak var moviePosterCollectionView: UICollectionView!
     var movieData: [MovieDataModel.Content]?
-    var totalCount: Int = 0
-    var apiOffset: Int = 0
-    var limit: Int = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +26,13 @@ class MovieListViewController: UIViewController {
     }
 
     fileprivate func fetchData(){
-        ApplicationManger.loadJson(filename: "CONTENTLISTINGPAGE-PAGE1") { (response, error) in
+
+        ApplicationManger.loadJson(filename: Json.one.name) { (response, error) in
             if error != nil{
                 return
             }
             if let response = response{
                 movieData = response.page.items.content
-                totalCount = response.page.count
             }
         }
     }
@@ -56,11 +54,6 @@ extension MovieListViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard indexPath.row == movieData.count - 1, movieData.count < totalCount else { return }
-        apiOffset += limit
-        self.fetchNewsDetails(searchText: EMPTY_TEXT, offset: apiOffset)
-    }
 }
 
 extension MovieListViewController: UICollectionViewDelegateFlowLayout {
@@ -70,7 +63,7 @@ extension MovieListViewController: UICollectionViewDelegateFlowLayout {
         
         let interItemSpacing = layout.minimumInteritemSpacing
         let sectionInsets    = layout.sectionInset.left + layout.sectionInset.right
-        return CGSize(width: (collectionView.frame.width - 2 * interItemSpacing - sectionInsets)/3, height: 200)
+        return CGSize(width: Int((collectionView.frame.width - 2 * interItemSpacing - sectionInsets)/3), height: 200)
         
     }
 }
