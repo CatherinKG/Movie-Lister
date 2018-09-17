@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class MovieListViewController: UIViewController {
 
     @IBOutlet weak var moviePosterCollectionView: UICollectionView!
@@ -27,7 +26,7 @@ class MovieListViewController: UIViewController {
 
     fileprivate func fetchData(){
 
-        ApplicationManger.loadJson(filename: Json.one.name) { (response, error) in
+        MovieListManager.loadJson(filename: "CONTENTLISTINGPAGE-PAGE1") { (response, error) in
             if error != nil{
                 return
             }

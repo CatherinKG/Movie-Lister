@@ -1,14 +1,14 @@
 //
-//  ApplicationManager.swift
+//  MovieListManager.swift
 //  Movie-Lister
 //
-//  Created by EVENTORG CATHERINE on 16/09/18.
+//  Created by EVENTORG CATHERINE on 17/09/18.
 //  Copyright © 2018 Catherine. All rights reserved.
 //
 
-import UIKit
+import  UIKit
 
-class ApplicationManger {
+class MovieListManager {
     class func loadJson(filename fileName: String, completion: (_ response: MovieDataModel?, _ error: Error?) -> ()) {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
