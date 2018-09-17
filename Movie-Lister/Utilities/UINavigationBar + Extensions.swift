@@ -11,7 +11,7 @@ import UIKit
 extension UINavigationBar {
     
     func setBackground() {
-        let navigationBgImage = UIImage(named: "nav_bar")?.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
+        let navigationBgImage = UIImage(named: Constants.navigationImage )?.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
         self.setBackgroundImage(navigationBgImage, for: .default)
     }
     

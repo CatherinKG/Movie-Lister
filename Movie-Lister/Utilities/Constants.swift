@@ -9,5 +9,6 @@
 struct Constants {
     static let cellId  = "cell"
     static let cellNibName = "MoviePosterCell"
+    static let navigationImage = "nav_bar"
 }
 
