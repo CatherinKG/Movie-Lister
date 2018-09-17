@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="146" height="233"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster5" translatesAutoresizingMaskIntoConstraints="NO" id="42J-tH-CVO">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_for_missing_posters" translatesAutoresizingMaskIntoConstraints="NO" id="42J-tH-CVO">
                         <rect key="frame" x="0.0" y="0.0" width="146" height="196"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nej-Fw-NGd">
@@ -52,6 +52,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="poster5" width="182" height="272"/>
+        <image name="placeholder_for_missing_posters" width="321" height="481"/>
     </resources>
 </document>
