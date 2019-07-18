@@ -53,10 +53,8 @@ extension MovieListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellId, for: indexPath) as! MoviePosterCell
-        cell.movieNameLabel.text = movieData[indexPath.item].name
-        if let image = UIImage(named: movieData[indexPath.item].imageName) {
-            cell.posterImageView.image = image
-        }
+        cell.name = movieData[indexPath.item].name
+        cell.image = movieData[indexPath.item].imageName
         return cell
     }
     
